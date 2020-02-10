@@ -74,6 +74,7 @@
 <div id="pcoded" class="pcoded">
     <div class="pcoded-overlay-box"></div>
     <div class="pcoded-container navbar-wrapper">
+        {% block header %}
         <nav class="navbar header-navbar pcoded-header">
             <div class="navbar-wrapper">
                 <div class="navbar-logo">
@@ -118,7 +119,7 @@
                                     </li>
                                     <li>
                                         <div class="media">
-                                            <img class="d-flex align-self-center img-radius" src="../files/assets/images/avatar-4.jpg" alt="Generic placeholder image">
+                                            <img class="d-flex align-self-center img-radius" src="{{ asset('back/colorlib.com/polygon/adminty/asset/files/assets/images/avatar-4.jpg') }}" alt="Generic placeholder image">
                                             <div class="media-body">
                                                 <h5 class="notification-user">John Doe</h5>
                                                 <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer elit.</p>
@@ -160,7 +161,7 @@
                         <li class="user-profile header-notification">
                             <div class="dropdown-primary dropdown">
                                 <div class="dropdown-toggle" data-toggle="dropdown">
-                                    <img src="../files/assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
+                                    <img src="{{ asset('back/colorlib.com/polygon/admintyfiles/assets/images/avatar-4.jpg') }}" class="img-radius" alt="User-Profile-Image">
                                     <span>John Doe</span>
                                     <i class="feather icon-chevron-down"></i>
                                 </div>
@@ -187,7 +188,11 @@
                                     </li>
                                     <li>
                                         <a href="auth-normal-sign-in.html">
-                                            <i class="feather icon-log-out"></i> Logout
+                                            <i class="feather icon-log-out">
+                                                <a href="{{ path('fos_user_security_logout') }}">
+                                                    {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                                                </a>
+                                            </i>
                                         </a>
                                     </li>
                                 </ul>
@@ -1930,6 +1935,7 @@
                                                         </ul>
                                                     </div>
                                                 </div>
+                                                {% endblock %}
                                                 <div class="card-block">
                                                     <div class="latest-update-box">
                                                         <div class="row p-b-15">
@@ -2144,27 +2150,27 @@
 <![endif]-->
 
 
-<script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="d7b9c734362f2169b108833c-text/javascript" src="../files/bower_components/jquery/js/jquery.min.js"></script>
-<script type="d7b9c734362f2169b108833c-text/javascript" src="../files/bower_components/jquery-ui/js/jquery-ui.min.js"></script>
-<script type="d7b9c734362f2169b108833c-text/javascript" src="../files/bower_components/popper.js/js/popper.min.js"></script>
-<script type="d7b9c734362f2169b108833c-text/javascript" src="../files/bower_components/bootstrap/js/bootstrap.min.js"></script>
+<script data-cfasync="false" src="{{ asset('back/colorlib.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js') }}"></script><script type="d7b9c734362f2169b108833c-text/javascript" src="{{ asset('back/colorlib.com/polygon/adminty/files/bower_components/jquery/js/jquery.min.js') }}"></script>
+<script type="d7b9c734362f2169b108833c-text/javascript" src="{{ asset('back/colorlib.com/polygon/adminty/files/bower_components/jquery-ui/js/jquery-ui.min.js') }}"></script>
+<script type="d7b9c734362f2169b108833c-text/javascript" src="{{ asset('back/colorlib.com/polygon/adminty/files/bower_components/popper.js/js/popper.min.js') }}"></script>
+<script type="d7b9c734362f2169b108833c-text/javascript" src="{{ asset('back/colorlib.com/polygon/adminty/files/bower_components/bootstrap/js/bootstrap.min.js') }}"></script>
 
-<script type="d7b9c734362f2169b108833c-text/javascript" src="../files/bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
+<script type="d7b9c734362f2169b108833c-text/javascript" src="{{ asset('back/colorlib.com/polygon/adminty/files/bower_components/jquery-slimscroll/js/jquery.slimscroll.js') }}"></script>
 
-<script type="d7b9c734362f2169b108833c-text/javascript" src="../files/bower_components/modernizr/js/modernizr.js"></script>
+<script type="d7b9c734362f2169b108833c-text/javascript" src="{{ asset('back/colorlib.com/polygon/adminty/files/bower_components/modernizr/js/modernizr.js') }}"></script>
 
-<script type="d7b9c734362f2169b108833c-text/javascript" src="../files/bower_components/chart.js/js/Chart.js"></script>
+<script type="d7b9c734362f2169b108833c-text/javascript" src="{{ asset('back/colorlib.com/polygon/adminty/files/bower_components/chart.js/js/Chart.js') }}"></script>
 
-<script src="../files/assets/pages/widget/amchart/amcharts.js" type="d7b9c734362f2169b108833c-text/javascript"></script>
-<script src="../files/assets/pages/widget/amchart/serial.js" type="d7b9c734362f2169b108833c-text/javascript"></script>
-<script src="../files/assets/pages/widget/amchart/light.js" type="d7b9c734362f2169b108833c-text/javascript"></script>
-<script src="../files/assets/js/jquery.mCustomScrollbar.concat.min.js" type="d7b9c734362f2169b108833c-text/javascript"></script>
-<script type="d7b9c734362f2169b108833c-text/javascript" src="../files/assets/js/SmoothScroll.js"></script>
-<script src="../files/assets/js/pcoded.min.js" type="d7b9c734362f2169b108833c-text/javascript"></script>
+<script src="{{ asset('back/colorlib.com/polygon/adminty/files/assets/pages/widget/amchart/amcharts.js') }}" type="d7b9c734362f2169b108833c-text/javascript"></script>
+<script src="{{ asset('back/colorlib.com/polygon/adminty/files/assets/pages/widget/amchart/serial.js') }}" type="d7b9c734362f2169b108833c-text/javascript"></script>
+<script src="{{ asset('back/colorlib.com/polygon/adminty/files/assets/pages/widget/amchart/light.js') }}" type="d7b9c734362f2169b108833c-text/javascript"></script>
+<script src="{{ asset('back/colorlib.com/polygon/adminty/files/assets/js/jquery.mCustomScrollbar.concat.min.js') }}" type="d7b9c734362f2169b108833c-text/javascript"></script>
+<script type="d7b9c734362f2169b108833c-text/javascript" src="{{ asset('back/colorlib.com/polygon/adminty/files/assets/js/SmoothScroll.js') }}"></script>
+<script src="{{ asset('back/colorlib.com/polygon/adminty/files/assets/js/pcoded.min.js') }}" type="d7b9c734362f2169b108833c-text/javascript"></script>
 
-<script src="../files/assets/js/vartical-layout.min.js" type="d7b9c734362f2169b108833c-text/javascript"></script>
-<script type="d7b9c734362f2169b108833c-text/javascript" src="../files/assets/pages/dashboard/custom-dashboard.js"></script>
-<script type="d7b9c734362f2169b108833c-text/javascript" src="../files/assets/js/script.min.js"></script>
+<script src="{{ asset('back/colorlib.com/polygon/adminty/files/assets/js/vartical-layout.min.js') }}" type="d7b9c734362f2169b108833c-text/javascript"></script>
+<script type="d7b9c734362f2169b108833c-text/javascript" src="{{ asset('back/colorlib.com/polygon/adminty/files/assets/pages/dashboard/custom-dashboard.js') }}"></script>
+<script type="d7b9c734362f2169b108833c-text/javascript" src="{{ asset('back/colorlib.com/polygon/adminty/files/assets/js/script.min.js') }}"></script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13" type="d7b9c734362f2169b108833c-text/javascript"></script>
 <script type="d7b9c734362f2169b108833c-text/javascript">
@@ -2174,7 +2180,6 @@
 
   gtag('config', 'UA-23581568-13');
 </script>
-<script src="../../../../ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="d7b9c734362f2169b108833c-|49" defer=""></script></body>
+<script src="{{asset('back/ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js') }}" data-cf-settings="d7b9c734362f2169b108833c-|49') }}" defer=""></script></body>
 
-<!-- Mirrored from colorlib.com//polygon/adminty/default/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Feb 2020 19:17:18 GMT -->
 </html>
