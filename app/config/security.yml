@@ -17,7 +17,9 @@ security:
             form_login:
                 provider: fos_userbundle
                 csrf_token_generator: security.csrf.token_manager
-
+                use_forward: false
+                always_use_default_target_path: false
+                default_target_path: /redirect
             logout:       true
             anonymous:    true
 
